@@ -46,8 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Banan.cs" />
     <Compile Include="Model\danhmuc.cs" />
     <Compile Include="Model\MonAn.cs" />
+    <Compile Include="Presenter\Banan_Presenter\AddBanan_Presenter.cs" />
+    <Compile Include="Presenter\Banan_Presenter\DeleteBanan_Presenter.cs" />
+    <Compile Include="Presenter\Banan_Presenter\DodlBanan_Presenter.cs" />
+    <Compile Include="Presenter\Banan_Presenter\ShowBanAn_Presenter.cs" />
+    <Compile Include="Presenter\Banan_Presenter\UpdateBanan_Presenter.cs" />
     <Compile Include="Presenter\Danhmuc_Presenter\AddDanhmuc_Precenter.cs" />
     <Compile Include="Presenter\Danhmuc_Presenter\DeleteDanhmuc_Precenter.cs" />
     <Compile Include="Presenter\Danhmuc_Presenter\Showdanhmuc.cs" />
@@ -55,9 +61,15 @@
     <Compile Include="Presenter\Danhmuc_Presenter\vitridanhmuc_presenter.cs" />
     <Compile Include="Presenter\MonAn_Presenter\AddMonan_Presenter.cs" />
     <Compile Include="Presenter\MonAn_Presenter\DeleteMonan_Presenter.cs" />
+    <Compile Include="Presenter\MonAn_Presenter\SearchMonan_Preseneter.cs" />
     <Compile Include="Presenter\MonAn_Presenter\ShowmonAn_Presenter.cs" />
     <Compile Include="Presenter\MonAn_Presenter\UpdateMonan_Presenter.cs" />
     <Compile Include="Presenter\MonAn_Presenter\vitri_monan_Presenter.cs" />
+    <Compile Include="View\Banan_View\IAddBanan.cs" />
+    <Compile Include="View\Banan_View\IDeleteBanan.cs" />
+    <Compile Include="View\Banan_View\IDodulieuBanan.cs" />
+    <Compile Include="View\Banan_View\IShowBanan.cs" />
+    <Compile Include="View\Banan_View\IUpdateBanan.cs" />
     <Compile Include="View\danhmuc\IAddDanhmuc.cs" />
     <Compile Include="View\danhmuc\IDeleteDanhmuc.cs" />
     <Compile Include="View\danhmuc\ISelectDanhmuc.cs" />
@@ -92,6 +104,7 @@
     <Compile Include="View\Monan_View\IaddMonan.cs" />
     <Compile Include="View\Monan_View\IDelete_Monan.cs" />
     <Compile Include="View\Monan_View\Iselect_Monan.cs" />
+    <Compile Include="View\Monan_View\IShearch_Monan.cs" />
     <Compile Include="View\Monan_View\Ishowmonan.cs" />
     <Compile Include="View\Monan_View\Iupdate_monan.cs" />
     <EmbeddedResource Include="View\fAccountProfile.resx">

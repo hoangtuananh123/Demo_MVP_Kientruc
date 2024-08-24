@@ -11,6 +11,7 @@ namespace Demo_MVP_QL.View.danhmuc
     {
         DataTable DanhmucData { get; set; }
         void HienThi();
+
         
     }
 }

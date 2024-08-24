@@ -13,6 +13,6 @@ namespace Demo_MVP_QL.View.danhmuc
         string DanhmucId { get; set; }
         string DanhmucName { get; set; }
         DataGridView DataGridViewDanhmuc { get; }
-        dtgvFood
+      
     }
 }

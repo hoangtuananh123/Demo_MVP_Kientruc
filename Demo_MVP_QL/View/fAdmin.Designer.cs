@@ -38,8 +38,8 @@
             this.dtgvBill = new System.Windows.Forms.DataGridView();
             this.tcFood = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.txt_search_monan = new System.Windows.Forms.TextBox();
+            this.btnTimmonan = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtgia = new System.Windows.Forms.NumericUpDown();
@@ -54,16 +54,16 @@
             this.txtidmon = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.xoathongtinmonan = new System.Windows.Forms.Button();
+            this.monan_delete = new System.Windows.Forms.Button();
+            this.monan_update = new System.Windows.Forms.Button();
+            this.monan_add = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtgvFood = new System.Windows.Forms.DataGridView();
             this.tcdanhmuc = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.xoathongtin = new System.Windows.Forms.Button();
+            this.btnxoadanhmuc = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -79,22 +79,22 @@
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcTableFood = new System.Windows.Forms.TabPage();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.xoathongtinban = new System.Windows.Forms.Button();
+            this.xoaban = new System.Windows.Forms.Button();
+            this.suaban = new System.Windows.Forms.Button();
+            this.themban = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtidban = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txttenban = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txttrangthaiban = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewBanan = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -148,7 +148,7 @@
             this.panel20.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBanan)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel24.SuspendLayout();
             this.panel28.SuspendLayout();
@@ -264,32 +264,33 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Controls.Add(this.button5);
+            this.panel6.Controls.Add(this.txt_search_monan);
+            this.panel6.Controls.Add(this.btnTimmonan);
             this.panel6.Location = new System.Drawing.Point(490, 9);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(364, 54);
             this.panel6.TabIndex = 3;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.dtgvFood_Paint);
             // 
-            // textBox1
+            // txt_search_monan
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 6);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 35);
-            this.textBox1.TabIndex = 1;
+            this.txt_search_monan.Location = new System.Drawing.Point(3, 6);
+            this.txt_search_monan.Multiline = true;
+            this.txt_search_monan.Name = "txt_search_monan";
+            this.txt_search_monan.Size = new System.Drawing.Size(250, 35);
+            this.txt_search_monan.TabIndex = 1;
+            this.txt_search_monan.TextChanged += new System.EventHandler(this.txt_search_monan_TextChanged);
             // 
-            // button5
+            // btnTimmonan
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(259, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 41);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Tìm kiếm";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button3_Click);
+            this.btnTimmonan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimmonan.Location = new System.Drawing.Point(259, 3);
+            this.btnTimmonan.Name = "btnTimmonan";
+            this.btnTimmonan.Size = new System.Drawing.Size(102, 41);
+            this.btnTimmonan.TabIndex = 0;
+            this.btnTimmonan.Text = "Tìm kiếm";
+            this.btnTimmonan.UseVisualStyleBackColor = true;
+            this.btnTimmonan.Click += new System.EventHandler(this.btnTimmonan_Click);
             // 
             // panel5
             // 
@@ -316,6 +317,11 @@
             // 
             this.txtgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtgia.Location = new System.Drawing.Point(8, 41);
+            this.txtgia.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.txtgia.Name = "txtgia";
             this.txtgia.Size = new System.Drawing.Size(355, 30);
             this.txtgia.TabIndex = 2;
@@ -343,7 +349,7 @@
             // 
             this.txtiddanhmuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtiddanhmuc.FormattingEnabled = true;
-            this.txtiddanhmuc.Location = new System.Drawing.Point(3, 44);
+            this.txtiddanhmuc.Location = new System.Drawing.Point(1, 44);
             this.txtiddanhmuc.Name = "txtiddanhmuc";
             this.txtiddanhmuc.Size = new System.Drawing.Size(360, 33);
             this.txtiddanhmuc.TabIndex = 1;
@@ -420,56 +426,59 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.xoathongtinmonan);
+            this.panel4.Controls.Add(this.monan_delete);
+            this.panel4.Controls.Add(this.monan_update);
+            this.panel4.Controls.Add(this.monan_add);
             this.panel4.Location = new System.Drawing.Point(0, 6);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(462, 56);
             this.panel4.TabIndex = 1;
             // 
-            // button4
+            // xoathongtinmonan
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(348, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 50);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Xem";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button3_Click);
+            this.xoathongtinmonan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xoathongtinmonan.Location = new System.Drawing.Point(348, 3);
+            this.xoathongtinmonan.Name = "xoathongtinmonan";
+            this.xoathongtinmonan.Size = new System.Drawing.Size(102, 50);
+            this.xoathongtinmonan.TabIndex = 0;
+            this.xoathongtinmonan.Text = "ClearTT";
+            this.xoathongtinmonan.UseVisualStyleBackColor = true;
+            this.xoathongtinmonan.Click += new System.EventHandler(this.xoathongtinmonan_Click);
+            this.xoathongtinmonan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.xoathongtinmonan_MouseClick);
             // 
-            // button3
+            // monan_delete
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(239, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 50);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Xoá";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.monan_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monan_delete.Location = new System.Drawing.Point(239, 3);
+            this.monan_delete.Name = "monan_delete";
+            this.monan_delete.Size = new System.Drawing.Size(105, 50);
+            this.monan_delete.TabIndex = 0;
+            this.monan_delete.Text = "Xoá";
+            this.monan_delete.UseVisualStyleBackColor = true;
+            this.monan_delete.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // monan_update
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(130, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 50);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.monan_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monan_update.Location = new System.Drawing.Point(130, 4);
+            this.monan_update.Name = "monan_update";
+            this.monan_update.Size = new System.Drawing.Size(107, 50);
+            this.monan_update.TabIndex = 0;
+            this.monan_update.Text = "Sửa";
+            this.monan_update.UseVisualStyleBackColor = true;
+            this.monan_update.Click += new System.EventHandler(this.monan_update_Click);
             // 
-            // button1
+            // monan_add
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(14, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.monan_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monan_add.Location = new System.Drawing.Point(14, 4);
+            this.monan_add.Name = "monan_add";
+            this.monan_add.Size = new System.Drawing.Size(112, 50);
+            this.monan_add.TabIndex = 0;
+            this.monan_add.Text = "Thêm";
+            this.monan_add.UseVisualStyleBackColor = true;
+            this.monan_add.Click += new System.EventHandler(this.monan_add_Click);
             // 
             // panel3
             // 
@@ -482,7 +491,7 @@
             // dtgvFood
             // 
             this.dtgvFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvFood.Location = new System.Drawing.Point(2, 4);
+            this.dtgvFood.Location = new System.Drawing.Point(3, 0);
             this.dtgvFood.Name = "dtgvFood";
             this.dtgvFood.RowHeadersWidth = 51;
             this.dtgvFood.RowTemplate.Height = 24;
@@ -506,8 +515,8 @@
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.button6);
-            this.panel12.Controls.Add(this.button7);
+            this.panel12.Controls.Add(this.xoathongtin);
+            this.panel12.Controls.Add(this.btnxoadanhmuc);
             this.panel12.Controls.Add(this.button8);
             this.panel12.Controls.Add(this.button9);
             this.panel12.Location = new System.Drawing.Point(11, 7);
@@ -515,26 +524,27 @@
             this.panel12.Size = new System.Drawing.Size(457, 56);
             this.panel12.TabIndex = 2;
             // 
-            // button6
+            // xoathongtin
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(348, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(102, 50);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Xem";
-            this.button6.UseVisualStyleBackColor = true;
+            this.xoathongtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xoathongtin.Location = new System.Drawing.Point(348, 3);
+            this.xoathongtin.Name = "xoathongtin";
+            this.xoathongtin.Size = new System.Drawing.Size(102, 50);
+            this.xoathongtin.TabIndex = 0;
+            this.xoathongtin.Text = "ClearTT";
+            this.xoathongtin.UseVisualStyleBackColor = true;
+            this.xoathongtin.Click += new System.EventHandler(this.xoathongtin_Click);
             // 
-            // button7
+            // btnxoadanhmuc
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(239, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 50);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Xoá";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnxoadanhmuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxoadanhmuc.Location = new System.Drawing.Point(239, 3);
+            this.btnxoadanhmuc.Name = "btnxoadanhmuc";
+            this.btnxoadanhmuc.Size = new System.Drawing.Size(105, 50);
+            this.btnxoadanhmuc.TabIndex = 0;
+            this.btnxoadanhmuc.Text = "Xoá";
+            this.btnxoadanhmuc.UseVisualStyleBackColor = true;
+            this.btnxoadanhmuc.Click += new System.EventHandler(this.btnxoadanhmuc_Click);
             // 
             // button8
             // 
@@ -677,54 +687,58 @@
             // 
             // panel18
             // 
-            this.panel18.Controls.Add(this.button10);
-            this.panel18.Controls.Add(this.button11);
-            this.panel18.Controls.Add(this.button12);
-            this.panel18.Controls.Add(this.button13);
+            this.panel18.Controls.Add(this.xoathongtinban);
+            this.panel18.Controls.Add(this.xoaban);
+            this.panel18.Controls.Add(this.suaban);
+            this.panel18.Controls.Add(this.themban);
             this.panel18.Location = new System.Drawing.Point(3, 6);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(462, 56);
             this.panel18.TabIndex = 5;
             // 
-            // button10
+            // xoathongtinban
             // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(348, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(102, 50);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "Xem";
-            this.button10.UseVisualStyleBackColor = true;
+            this.xoathongtinban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xoathongtinban.Location = new System.Drawing.Point(348, 3);
+            this.xoathongtinban.Name = "xoathongtinban";
+            this.xoathongtinban.Size = new System.Drawing.Size(102, 50);
+            this.xoathongtinban.TabIndex = 0;
+            this.xoathongtinban.Text = "ClearTT";
+            this.xoathongtinban.UseVisualStyleBackColor = false;
+            this.xoathongtinban.Click += new System.EventHandler(this.xoathongtinban_Click);
             // 
-            // button11
+            // xoaban
             // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(239, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(105, 50);
-            this.button11.TabIndex = 0;
-            this.button11.Text = "Xoá";
-            this.button11.UseVisualStyleBackColor = true;
+            this.xoaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xoaban.Location = new System.Drawing.Point(239, 3);
+            this.xoaban.Name = "xoaban";
+            this.xoaban.Size = new System.Drawing.Size(105, 50);
+            this.xoaban.TabIndex = 0;
+            this.xoaban.Text = "Xoá";
+            this.xoaban.UseVisualStyleBackColor = true;
+            this.xoaban.Click += new System.EventHandler(this.xoaban_Click);
             // 
-            // button12
+            // suaban
             // 
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(130, 4);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(107, 50);
-            this.button12.TabIndex = 0;
-            this.button12.Text = "Sửa";
-            this.button12.UseVisualStyleBackColor = true;
+            this.suaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suaban.Location = new System.Drawing.Point(130, 4);
+            this.suaban.Name = "suaban";
+            this.suaban.Size = new System.Drawing.Size(107, 50);
+            this.suaban.TabIndex = 0;
+            this.suaban.Text = "Sửa";
+            this.suaban.UseVisualStyleBackColor = true;
+            this.suaban.Click += new System.EventHandler(this.suaban_Click);
             // 
-            // button13
+            // themban
             // 
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(14, 4);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(112, 50);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "Thêm";
-            this.button13.UseVisualStyleBackColor = true;
+            this.themban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.themban.Location = new System.Drawing.Point(14, 4);
+            this.themban.Name = "themban";
+            this.themban.Size = new System.Drawing.Size(112, 50);
+            this.themban.TabIndex = 0;
+            this.themban.Text = "Thêm";
+            this.themban.UseVisualStyleBackColor = true;
+            this.themban.Click += new System.EventHandler(this.themban_Click);
             // 
             // panel19
             // 
@@ -738,21 +752,21 @@
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.textBox4);
+            this.panel21.Controls.Add(this.txtidban);
             this.panel21.Controls.Add(this.label9);
             this.panel21.Location = new System.Drawing.Point(6, 5);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(356, 84);
             this.panel21.TabIndex = 1;
             // 
-            // textBox4
+            // txtidban
             // 
-            this.textBox4.Location = new System.Drawing.Point(4, 43);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(349, 38);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtidban.Location = new System.Drawing.Point(4, 43);
+            this.txtidban.Multiline = true;
+            this.txtidban.Name = "txtidban";
+            this.txtidban.Size = new System.Drawing.Size(349, 38);
+            this.txtidban.TabIndex = 2;
+            this.txtidban.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label9
             // 
@@ -766,21 +780,21 @@
             // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.textBox7);
+            this.panel20.Controls.Add(this.txttenban);
             this.panel20.Controls.Add(this.label8);
             this.panel20.Location = new System.Drawing.Point(4, 95);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(355, 84);
             this.panel20.TabIndex = 1;
             // 
-            // textBox7
+            // txttenban
             // 
-            this.textBox7.Location = new System.Drawing.Point(6, 43);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(346, 38);
-            this.textBox7.TabIndex = 2;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txttenban.Location = new System.Drawing.Point(6, 43);
+            this.txttenban.Multiline = true;
+            this.txttenban.Name = "txttenban";
+            this.txttenban.Size = new System.Drawing.Size(346, 38);
+            this.txttenban.TabIndex = 2;
+            this.txttenban.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label8
             // 
@@ -794,21 +808,22 @@
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.comboBox2);
+            this.panel13.Controls.Add(this.txttrangthaiban);
             this.panel13.Controls.Add(this.label7);
             this.panel13.Location = new System.Drawing.Point(6, 185);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(353, 84);
             this.panel13.TabIndex = 1;
             // 
-            // comboBox2
+            // txttrangthaiban
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 40);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(347, 30);
-            this.comboBox2.TabIndex = 1;
+            this.txttrangthaiban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttrangthaiban.FormattingEnabled = true;
+            this.txttrangthaiban.Location = new System.Drawing.Point(3, 40);
+            this.txttrangthaiban.Name = "txttrangthaiban";
+            this.txttrangthaiban.Size = new System.Drawing.Size(347, 30);
+            this.txttrangthaiban.TabIndex = 1;
+            this.txttrangthaiban.SelectedIndexChanged += new System.EventHandler(this.txttrangthaiban_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -822,21 +837,22 @@
             // 
             // panel17
             // 
-            this.panel17.Controls.Add(this.dataGridView2);
+            this.panel17.Controls.Add(this.dataGridViewBanan);
             this.panel17.Location = new System.Drawing.Point(6, 68);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(484, 554);
             this.panel17.TabIndex = 2;
             // 
-            // dataGridView2
+            // dataGridViewBanan
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 7);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(478, 544);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridViewBanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBanan.Location = new System.Drawing.Point(3, 7);
+            this.dataGridViewBanan.Name = "dataGridViewBanan";
+            this.dataGridViewBanan.RowHeadersWidth = 51;
+            this.dataGridViewBanan.RowTemplate.Height = 24;
+            this.dataGridViewBanan.Size = new System.Drawing.Size(478, 544);
+            this.dataGridViewBanan.TabIndex = 0;
+            this.dataGridViewBanan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBanan_CellContentClick);
             // 
             // tabPage1
             // 
@@ -1109,7 +1125,7 @@
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBanan)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel28.ResumeLayout(false);
@@ -1143,13 +1159,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button monan_delete;
+        private System.Windows.Forms.Button monan_update;
+        private System.Windows.Forms.Button monan_add;
         private System.Windows.Forms.DataGridView dtgvFood;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txt_search_monan;
+        private System.Windows.Forms.Button btnTimmonan;
+        private System.Windows.Forms.Button xoathongtinmonan;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel9;
@@ -1164,8 +1180,6 @@
         private System.Windows.Forms.NumericUpDown txtgia;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel19;
@@ -1173,15 +1187,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtidban;
+        private System.Windows.Forms.TextBox txttenban;
+        private System.Windows.Forms.DataGridView dataGridViewBanan;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TabPage tcdanhmuc;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button xoathongtin;
+        private System.Windows.Forms.Button btnxoadanhmuc;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel14;
@@ -1194,10 +1208,10 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.DataGridView dataGridViewdanhmuc;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button xoathongtinban;
+        private System.Windows.Forms.Button xoaban;
+        private System.Windows.Forms.Button suaban;
+        private System.Windows.Forms.Button themban;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Button button18;
@@ -1220,5 +1234,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.ComboBox txttrangthaiban;
+        private System.Windows.Forms.Label label7;
     }
 }

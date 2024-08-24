@@ -11,12 +11,12 @@ namespace Demo_MVP_QL.Presenter.Danhmuc_Presenter
 {
     internal class DeleteDanhmuc_Precenter
     {
-        private readonly IUpdateDanhmuc _Updatedanhmuc;
+             IDeleteDanhmuc dm;
         string sqlcon = @"Data Source=DESKTOP-4KBKTDB;Initial Catalog=QuanLyQuanAn;Integrated Security=True";
 
-        public DeleteDanhmuc_Precenter(IUpdateDanhmuc Updatedanhmuc)
+        public DeleteDanhmuc_Precenter(IDeleteDanhmuc dm)
         {
-            _Updatedanhmuc = Updatedanhmuc;
+            this.dm = dm;
         }
 
         public bool xoadanhmuc()
@@ -25,14 +25,14 @@ namespace Demo_MVP_QL.Presenter.Danhmuc_Presenter
             SqlConnection sqlcn = new SqlConnection(sqlcon);
             sqlcn.Open();
             SqlCommand cmd = new SqlCommand("Delete from  FoodCategory WHERE id=@id ;", sqlcn);
-            cmd.Parameters.AddWithValue("@id", _Updatedanhmuc.danhmucID);
+            cmd.Parameters.AddWithValue("@id", dm.danhmucID);
         
 
 
             cmd.ExecuteNonQuery();
             sqlcn.Close();
 
-            _Updatedanhmuc.Message = String.Format("xoá thành công");
+            dm.Message = String.Format("xoá thành công");
             return true;
 
         }

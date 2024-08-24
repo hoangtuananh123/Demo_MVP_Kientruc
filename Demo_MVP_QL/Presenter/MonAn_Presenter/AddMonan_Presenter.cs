@@ -21,7 +21,7 @@ namespace Demo_MVP_QL.Presenter.MonAn
             this.addMonanV = addMonanV;
         }
 
-        public bool adddanhmuc()
+        public bool addMonan()
         {
            
             SqlConnection sqlcn = new SqlConnection(sqlcon);
@@ -30,7 +30,7 @@ namespace Demo_MVP_QL.Presenter.MonAn
 
 
             cmd.Parameters.AddWithValue("@namee", addMonanV.MonAnName);
-            cmd.Parameters.AddWithValue("@@idCategoryy", addMonanV.IdCategory);
+            cmd.Parameters.AddWithValue("@idCategoryy", addMonanV.IdCategory);
             cmd.Parameters.AddWithValue("@pricee", addMonanV.MonAnPrice);
   
 
