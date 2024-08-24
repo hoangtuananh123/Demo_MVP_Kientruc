@@ -74,7 +74,6 @@ namespace Demo_MVP_QL.View
             get => (DataTable)dataGridViewdanhmuc.DataSource;
             set => dataGridViewdanhmuc.DataSource = value;
         }
-
         public void HienThi()
         {
             dataGridViewdanhmuc.DataSource = DanhmucData;
