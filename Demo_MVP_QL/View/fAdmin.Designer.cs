@@ -118,6 +118,9 @@
             this.button17 = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tcBill.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -159,6 +162,7 @@
             this.panel22.SuspendLayout();
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.panel31.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -871,18 +875,19 @@
             // 
             this.panel24.Controls.Add(this.panel28);
             this.panel24.Controls.Add(this.panel26);
+            this.panel24.Controls.Add(this.panel31);
             this.panel24.Controls.Add(this.panel25);
             this.panel24.Controls.Add(this.panel27);
             this.panel24.Controls.Add(this.panel29);
-            this.panel24.Location = new System.Drawing.Point(492, 75);
+            this.panel24.Location = new System.Drawing.Point(492, 71);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(365, 550);
+            this.panel24.Size = new System.Drawing.Size(365, 544);
             this.panel24.TabIndex = 6;
             // 
             // panel28
             // 
             this.panel28.Controls.Add(this.button18);
-            this.panel28.Location = new System.Drawing.Point(11, 373);
+            this.panel28.Location = new System.Drawing.Point(9, 463);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(351, 64);
             this.panel28.TabIndex = 12;
@@ -901,7 +906,7 @@
             // 
             this.panel26.Controls.Add(this.comboBox3);
             this.panel26.Controls.Add(this.label12);
-            this.panel26.Location = new System.Drawing.Point(10, 283);
+            this.panel26.Location = new System.Drawing.Point(10, 373);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(352, 84);
             this.panel26.TabIndex = 8;
@@ -948,15 +953,16 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(3, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 22);
+            this.label11.Size = new System.Drawing.Size(104, 28);
             this.label11.TabIndex = 1;
-            this.label11.Text = "Danh mục:";
+            this.label11.Text = "Mật khẩu";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel27
             // 
             this.panel27.Controls.Add(this.textBox11);
             this.panel27.Controls.Add(this.label13);
-            this.panel27.Location = new System.Drawing.Point(10, 3);
+            this.panel27.Location = new System.Drawing.Point(11, 13);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(352, 84);
             this.panel27.TabIndex = 10;
@@ -983,7 +989,7 @@
             // 
             this.panel29.Controls.Add(this.textBox8);
             this.panel29.Controls.Add(this.label10);
-            this.panel29.Location = new System.Drawing.Point(10, 103);
+            this.panel29.Location = new System.Drawing.Point(9, 103);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(352, 84);
             this.panel29.TabIndex = 11;
@@ -1002,9 +1008,10 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(3, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 22);
+            this.label10.Size = new System.Drawing.Size(165, 28);
             this.label10.TabIndex = 1;
-            this.label10.Text = "Tên hiển thị:";
+            this.label10.Text = "Tên đăng nhập";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // panel22
             // 
@@ -1075,6 +1082,33 @@
             this.dataGridView3.Size = new System.Drawing.Size(481, 552);
             this.dataGridView3.TabIndex = 0;
             // 
+            // panel31
+            // 
+            this.panel31.Controls.Add(this.textBox2);
+            this.panel31.Controls.Add(this.label15);
+            this.panel31.Location = new System.Drawing.Point(11, 283);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(354, 84);
+            this.panel31.TabIndex = 9;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(4, 43);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(344, 38);
+            this.textBox2.TabIndex = 2;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 9);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(193, 28);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Nhập lại mật khẩu";
+            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1140,6 +1174,8 @@
             this.panel22.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panel31.ResumeLayout(false);
+            this.panel31.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1236,5 +1272,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.ComboBox txttrangthaiban;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label15;
     }
 }
