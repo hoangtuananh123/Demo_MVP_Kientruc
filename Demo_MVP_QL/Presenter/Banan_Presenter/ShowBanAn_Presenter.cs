@@ -19,7 +19,7 @@ namespace Demo_MVP_QL.Presenter.Banan_Presenter
             _view = view;
         }
 
-       
+
 
         public void ShowBanan()
         {
@@ -37,6 +37,11 @@ namespace Demo_MVP_QL.Presenter.Banan_Presenter
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
 
+                        // Thay đổi tên cột trong DataTable
+                        dt.Columns["id"].ColumnName = "Mã";
+                        dt.Columns["name"].ColumnName = "Tên";
+                        dt.Columns["status"].ColumnName = "Trạng Thái";
+
                         // Liên kết DataGridView với DataTable
                         _view.DataGridViewBanan.DataSource = dt;
                     }
@@ -47,6 +52,8 @@ namespace Demo_MVP_QL.Presenter.Banan_Presenter
                 }
             }
         }
+
+
 
     }
 }
