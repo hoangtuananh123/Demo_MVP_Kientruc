@@ -45,11 +45,28 @@ namespace Demo_MVP_QL.Presenter.Danhmuc_Presenter
                 da.Fill(dt);
 
                 // Bind the ComboBox with the DataTable
-                comboBox.DisplayMember = "name"; // Show the name in the ComboBox
+                comboBox.DisplayMember = "name"; // Display the category name in the ComboBox
                 comboBox.ValueMember = "id";     // Use the ID as the value of the ComboBox items
                 comboBox.DataSource = dt;
             }
         }
+        //public void HienThiTenDanhmuccombobox(ComboBox comboBox)
+        //{
+        //    using (SqlConnection sqlcnt = new SqlConnection(sqlcon))
+        //    {
+        //        sqlcnt.Open();
+        //        SqlCommand cmd = new SqlCommand("SELECT [id], [name] FROM FoodCategory", sqlcnt);
+        //        DataTable dt = new DataTable();
+        //        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //        da.Fill(dt);
+
+        //        // Bind the ComboBox with the DataTable
+        //        comboBox.DisplayMember = "name"; // Display the category name in the ComboBox
+        //        comboBox.ValueMember = "id";     // Use the ID as the value of the ComboBox items
+        //        comboBox.DataSource = dt;
+        //    }
+        //}
+
 
 
 

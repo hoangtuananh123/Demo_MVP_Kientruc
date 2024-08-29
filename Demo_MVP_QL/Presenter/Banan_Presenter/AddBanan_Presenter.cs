@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using Demo_MVP_QL.View.Banan_View;
 
@@ -41,6 +42,37 @@ namespace Demo_MVP_QL.Presenter.Banan_Presenter
                         {
                             _view.Message = "Thêm bàn mới thất bại.";
                         }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _view.Message = $"Lỗi: {ex.Message}";
+                }
+            }
+        }
+        public void ShowBanan()
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Truy vấn lấy tất cả dữ liệu từ bảng TableFood
+                    string query = "SELECT id, name, status FROM TableFood";
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+
+                        // Thay đổi tên cột trong DataTable
+                        dt.Columns["id"].ColumnName = "Mã";
+                        dt.Columns["name"].ColumnName = "Tên";
+                        dt.Columns["status"].ColumnName = "Trạng Thái";
+
+                        // Liên kết DataGridView với DataTable
+                        _view.DataGridViewBanan.DataSource = dt;
                     }
                 }
                 catch (Exception ex)

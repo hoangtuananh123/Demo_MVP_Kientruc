@@ -13,6 +13,7 @@ namespace Demo_MVP_QL.View.Banan_View
         string BananName { get; set; }
         Boolean BananStatus { get; set; }
         int SelectedRowIndexBanan { get; }
+  
         String Message { get; set; }
         DataGridView DataGridViewBanan { get; set; }
     }

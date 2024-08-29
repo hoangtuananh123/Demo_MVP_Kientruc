@@ -217,13 +217,14 @@ namespace Demo_MVP_QL.View
         {
             DeleteMonan_Presenter ma = new DeleteMonan_Presenter(this);
             ma.xoamonan();
+            ma.HienThiMonan();
             clearTT();
              
 
 
 
-            ShowmonAn_Presenter pr = new ShowmonAn_Presenter(this);
-            pr.HienThiMonan();
+          
+          
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -276,6 +277,8 @@ namespace Demo_MVP_QL.View
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Ensure that an item is selected
+            Showdanhmuc sh = new Showdanhmuc(this);
+            sh.HienThiTenDanhmuc(txtiddanhmuc);
             if (txtiddanhmuc.SelectedIndex != -1)
             {
                 // Retrieve the selected category's name and ID
@@ -315,9 +318,9 @@ namespace Demo_MVP_QL.View
             }
             AddDanhmuc_Precenter pre = new AddDanhmuc_Precenter(this);
             pre.adddanhmuc();
+            pre.HienThiDanhmuc();
             clearTT();
-            Showdanhmuc presenter = new Showdanhmuc(this);
-            presenter.HienThiDanhmuc();
+          
         }
         public DataGridView DataGridViewBanan { get => dataGridViewBanan; set => dataGridViewBanan = value; } // Kết nối DataGridView với giao diện
         public DataTable MonAnData {
@@ -342,6 +345,7 @@ namespace Demo_MVP_QL.View
             txtidmon.ReadOnly = true;   
              Showdanhmuc presenter = new Showdanhmuc(this);
             presenter.HienThiDanhmuc();
+       
 
             ShowmonAn_Presenter pre = new ShowmonAn_Presenter(this);
             pre.HienThiMonan();
@@ -374,10 +378,11 @@ namespace Demo_MVP_QL.View
 
             }
             UpdateDanhmuc_Precenter dm = new UpdateDanhmuc_Precenter (this);
-            dm.suadanhmuc();
+            dm.suadanhmuc(); 
+            dm.HienThiDanhmuc();
             clearTT();
-            Showdanhmuc presenter = new Showdanhmuc(this);
-            presenter.HienThiDanhmuc();
+       
+         
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -396,9 +401,10 @@ namespace Demo_MVP_QL.View
             AddMonan_Presenter pr = new AddMonan_Presenter(this);
            
                 pr.addMonan();
+            
+            //ShowmonAn_Presenter ma = new ShowmonAn_Presenter(this);
+           pr.HienThiMonan();
             clearTT();
-            ShowmonAn_Presenter ma = new ShowmonAn_Presenter(this);
-            ma.HienThiMonan();
         }
 
         private void monan_update_Click(object sender, EventArgs e)
@@ -413,20 +419,21 @@ namespace Demo_MVP_QL.View
            
             UpdateMonan_Presenter pr = new UpdateMonan_Presenter(this);
             pr.Updatemonan();
-
+         pr.HienThiMonan();
             clearTT();
 
-            ShowmonAn_Presenter ma = new ShowmonAn_Presenter(this);
-            ma.HienThiMonan();
+           
+          
         }
 
         private void btnxoadanhmuc_Click(object sender, EventArgs e)
         {
             DeleteDanhmuc_Precenter pr = new DeleteDanhmuc_Precenter(this);
             pr.xoadanhmuc();
+            pr.HienThiDanhmuc();
             clearTT();
-            Showdanhmuc presenter = new Showdanhmuc(this);
-            presenter.HienThiDanhmuc();
+          
+      
 
 
 
@@ -469,8 +476,7 @@ namespace Demo_MVP_QL.View
            txtidban.ReadOnly = true;
             AddBanan_Presenter pr = new AddBanan_Presenter(this);
             pr.AddBanan();
-            ShowBanAn_Presenter prr = new ShowBanAn_Presenter(this);
-            prr.ShowBanan();
+            pr.ShowBanan();
             clearTT();
         }
 
@@ -511,8 +517,8 @@ namespace Demo_MVP_QL.View
             }
             UpdateBanan_Presenter pr = new UpdateBanan_Presenter(this);
             pr.UpdateBanan();
-            ShowBanAn_Presenter s = new ShowBanAn_Presenter(this);
-            s.ShowBanan();
+           
+            pr.ShowBanan();
             clearTT();
 
         }
@@ -527,8 +533,8 @@ namespace Demo_MVP_QL.View
             }
             DeleteBanan_Presenter pr = new DeleteBanan_Presenter(this);
             pr.DeleteBanan();
-            ShowBanAn_Presenter s = new ShowBanAn_Presenter(this);
-            s.ShowBanan();
+       
+            pr.ShowBanan();
             clearTT();
 
         }

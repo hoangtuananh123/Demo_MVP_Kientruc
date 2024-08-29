@@ -1,6 +1,7 @@
 ﻿using Demo_MVP_QL.View.Monan_View;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,31 @@ namespace Demo_MVP_QL.Presenter.MonAn
             monanV.Message = String.Format("sửa thành công");
             return true;
 
+        }
+        public void HienThiMonan()
+        {
+            using (SqlConnection sqlcnt = new SqlConnection(sqlcon))
+            {
+                sqlcnt.Open();
+                SqlCommand cmd = new SqlCommand(@"
+                    SELECT 
+                        f.[id] AS [Id món ăn], 
+                        f.[name] AS [Tên món ăn], 
+                        c.[name] AS [Tên danh mục], 
+                        f.[price] AS [Giá]
+                    FROM 
+                        [QuanLyQuanAn].[dbo].[Food] f
+                    JOIN 
+                        [QuanLyQuanAn].[dbo].[FoodCategory] c
+                    ON 
+                        f.[idCategory] = c.[id];", sqlcnt);
+
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                monanV.MonanData = dt;
+                monanV.HienThimonan();
+            }
         }
     }
 }

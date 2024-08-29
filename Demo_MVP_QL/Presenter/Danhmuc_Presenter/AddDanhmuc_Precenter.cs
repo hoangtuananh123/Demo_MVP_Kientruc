@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Demo_MVP_QL.Model;
+using Demo_MVP_QL.Presenter.Danhmuc_Presenter;
+using System.Windows.Forms;
 
 namespace Demo_MVP_QL.Presenter
 {
@@ -40,10 +42,39 @@ namespace Demo_MVP_QL.Presenter
             return true;
 
         }
+        public void HienThiDanhmuc()
+        {
+            using (SqlConnection sqlcnt = new SqlConnection(sqlcon))
+            {
+                sqlcnt.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM FoodCategory", sqlcnt);
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                addDanhmuc.DanhmucData = dt;
+                addDanhmuc.HienThi();
+            }
+        }
+        public void HienThiTenDanhmuc(ComboBox comboBox)
+        {
+            using (SqlConnection sqlcnt = new SqlConnection(sqlcon))
+            {
+                sqlcnt.Open();
+                SqlCommand cmd = new SqlCommand("SELECT [id], [name] FROM FoodCategory", sqlcnt);
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+
+                // Bind the ComboBox with the DataTable
+                comboBox.DisplayMember = "name"; // Show the name in the ComboBox
+                comboBox.ValueMember = "id";     // Use the ID as the value of the ComboBox items
+                comboBox.DataSource = dt;
+            }
+        }
 
 
 
-  
+
 
 
 

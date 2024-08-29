@@ -14,7 +14,9 @@ namespace Demo_MVP_QL.View.danhmuc
         string danhmucName { get; set; }
         DataGridView DataGridViewDanhmuc { get; }
         String Message { get; set; }
+        DataTable DanhmucData { get; set; }
+        void HienThi();
 
-      
+
     }
 }

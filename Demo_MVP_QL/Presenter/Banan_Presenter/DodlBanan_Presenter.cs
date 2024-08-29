@@ -17,9 +17,9 @@ namespace Demo_MVP_QL.Presenter.Banan_Presenter
             int i = _view.SelectedRowIndexBanan;
             if (i >= 0)
             {
-                _view.BananId = Convert.ToInt32(_view.DataGridViewBanan.Rows[i].Cells["id"].Value);
-                _view.BananName = _view.DataGridViewBanan.Rows[i].Cells["name"].Value.ToString();
-                _view.BananStatus = _view.DataGridViewBanan.Rows[i].Cells["status"].Value.ToString() == "Có người";
+                _view.BananId = Convert.ToInt32(_view.DataGridViewBanan.Rows[i].Cells["Mã"].Value);
+                _view.BananName = _view.DataGridViewBanan.Rows[i].Cells["Tên"].Value.ToString();
+                _view.BananStatus = _view.DataGridViewBanan.Rows[i].Cells["Trạng Thái"].Value.ToString() == "Có người";
             }
         }
     }
