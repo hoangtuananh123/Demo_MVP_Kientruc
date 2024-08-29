@@ -276,20 +276,20 @@ namespace Demo_MVP_QL.View
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Ensure that an item is selected
-            Showdanhmuc sh = new Showdanhmuc(this);
-            sh.HienThiTenDanhmuc(txtiddanhmuc);
-            if (txtiddanhmuc.SelectedIndex != -1)
-            {
-                // Retrieve the selected category's name and ID
-                string selectedCategoryName = txtiddanhmuc.Text; // Gets the displayed name
-                int selectedCategoryId = Convert.ToInt32(txtiddanhmuc.SelectedValue); // Gets the corresponding ID
+            //// Ensure that an item is selected
+            //Showdanhmuc sh = new Showdanhmuc(this);
+            //sh.HienThiTenDanhmuc(txtiddanhmuc);
+            //if (txtiddanhmuc.SelectedIndex != -1)
+            //{
+            //    // Retrieve the selected category's name and ID
+            //    string selectedCategoryName = txtiddanhmuc.Text; // Gets the displayed name
+            //    int selectedCategoryId = Convert.ToInt32(txtiddanhmuc.SelectedValue); // Gets the corresponding ID
 
-                // Display or use the selected category's ID and name
-                MessageBox.Show($"Selected Category: {selectedCategoryName}, ID: {selectedCategoryId}");
+            //    // Display or use the selected category's ID and name
+            //    MessageBox.Show($"Selected Category: {selectedCategoryName}, ID: {selectedCategoryId}");
 
-                // You can also update other fields or perform additional logic here
-            }
+            //    // You can also update other fields or perform additional logic here
+            //}
         }
 
 
@@ -345,6 +345,7 @@ namespace Demo_MVP_QL.View
             txtidmon.ReadOnly = true;   
              Showdanhmuc presenter = new Showdanhmuc(this);
             presenter.HienThiDanhmuc();
+            presenter.HienThiTenDanhmuc(txtiddanhmuc);
        
 
             ShowmonAn_Presenter pre = new ShowmonAn_Presenter(this);
