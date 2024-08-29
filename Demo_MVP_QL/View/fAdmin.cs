@@ -276,7 +276,7 @@ namespace Demo_MVP_QL.View
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //// Ensure that an item is selected
+            // Ensure that an item is selected
             //Showdanhmuc sh = new Showdanhmuc(this);
             //sh.HienThiTenDanhmuc(txtiddanhmuc);
             //if (txtiddanhmuc.SelectedIndex != -1)
@@ -346,7 +346,6 @@ namespace Demo_MVP_QL.View
              Showdanhmuc presenter = new Showdanhmuc(this);
             presenter.HienThiDanhmuc();
             presenter.HienThiTenDanhmuc(txtiddanhmuc);
-       
 
             ShowmonAn_Presenter pre = new ShowmonAn_Presenter(this);
             pre.HienThiMonan();
